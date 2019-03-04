@@ -15,7 +15,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-    SUBJECT_PREFIX = 'my project '
+    SUBJECT_PREFIX = 'my project'
     SENDER_EMAIL = 'carizeree@gmail.com'
 
     @staticmethod
@@ -25,6 +25,7 @@ class Config:
 
 class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:caca1@localhost/pitches'
+    DEBUG = True
     pass
 
 

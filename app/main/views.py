@@ -174,7 +174,7 @@ def update_profile(uname):
     
     return render_template('profile/update.html',form =form)
 
-@main.route('/view/comment/<int:id>')
+@main.route('/view/comment/<int:id>', methods = ['GET','POST'])
 def view_comments(id):
     '''
     Function that returs  the comments belonging to a particular pitch
@@ -184,7 +184,7 @@ def view_comments(id):
 
 
 
-@main.route('/test/<int:id>')  
+@main.route('/test/<int:id>', methods = ['GET','POST'])  
 def test(id):
     '''
     this is route for basic testing
